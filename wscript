@@ -15,6 +15,7 @@ def set_options(opt):
   opt.tool_options('node_addon')
 
 def configure(conf):
+  conf.env.prepend_value('CXXFLAGS', ['-D__STDC_CONSTANT_MACROS'])
   conf.check_tool('compiler_cxx')
   conf.check_tool('node_addon')
 
